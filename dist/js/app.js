@@ -348,7 +348,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
    if (isDesktop) {
       // Вертикальная прокрутка карточек
-      const extraOffset = 100;
+      const extraOffset = 180;
       const cardsHeight = cards.scrollHeight;
       const sectionHeight = section.offsetHeight;
       const scrollLength = (cardsHeight - sectionHeight + extraOffset) * 2;
@@ -381,7 +381,7 @@ document.addEventListener("DOMContentLoaded", () => {
             start: "bottom bottom",
             end: () => `+=${scrollLength}`,
             pin: true,
-            scrub: 0.3,
+            scrub: 0.1,
             fastScrollEnd: true
          }
       });

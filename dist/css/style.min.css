@@ -1904,7 +1904,6 @@ Partners
   flex-direction: column;
   gap: 25px;
   will-change: transform;
-  transition: transform 0.1s linear 0s;
 }
 @media (width < 1024px) {
   .partners__cards {
