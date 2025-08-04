@@ -1630,6 +1630,10 @@ About
     color: #fff;
   }
 }
+.about__agitation .btn::before,
+.about__agitation .btn::after {
+  height: 52%;
+}
 @media (width < 1024px) {
   .about__agitation {
     flex-direction: column;
