@@ -358,7 +358,7 @@ document.addEventListener("DOMContentLoaded", () => {
             start: "top top",
             end: () => `+=${scrollLength}`,
             pin: true,
-            scrub: 0.3,
+            scrub: 1,
             fastScrollEnd: true
          }
       });
