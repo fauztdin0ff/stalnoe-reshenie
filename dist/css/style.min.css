@@ -1781,18 +1781,11 @@ Projects
     margin-bottom: 20px;
   }
 }
-.projects__item-info {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  justify-content: space-between;
-}
 .projects__item-name {
   font-size: 20px;
   font-weight: 500;
   line-height: 100%;
   letter-spacing: 0;
-  max-width: 244px;
   padding-left: 5px;
 }
 @media (width < 767px) {
@@ -1907,7 +1900,6 @@ Partners
   will-change: transform;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
-  transition: all 0.1s linear 0s;
 }
 @media (width < 1024px) {
   .partners__cards {
@@ -2279,7 +2271,7 @@ Faq
   color: rgba(249, 249, 249, 0.5);
   font-size: 32px;
   font-weight: 400;
-  line-height: 102%;
+  line-height: 80%;
   letter-spacing: 0;
   text-align: center;
   transition: all 0.3s ease 0s;

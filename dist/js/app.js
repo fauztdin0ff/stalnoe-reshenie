@@ -337,37 +337,36 @@ document.addEventListener('DOMContentLoaded', function () {
 /*------------------------------
 Partners anim
 ---------------------------*/
-
 document.addEventListener("DOMContentLoaded", () => {
    gsap.registerPlugin(ScrollTrigger);
+
    const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+
    const section = document.querySelector(".partners");
    const cards = document.querySelector(".partners__cards");
    const wrapper = document.querySelector(".partners__cards-wrapper");
 
    if (isDesktop) {
-      const extraOffset = 180;
       const cardsHeight = cards.scrollHeight;
       const sectionHeight = section.offsetHeight;
-      const scrollLength = (cardsHeight - sectionHeight + extraOffset) * 2;
+      const extraOffset = 140;
 
       gsap.to(cards, {
          y: () => -(cardsHeight - sectionHeight + extraOffset),
+         ease: "none",
          scrollTrigger: {
             trigger: section,
             start: "top top",
-            end: () => `+=${scrollLength}`,
+            end: () => `+=${cardsHeight - sectionHeight + extraOffset}`,
             pin: true,
-            scrub: 1,
-            fastScrollEnd: true
+            scrub: true,
          }
       });
 
    } else {
-      const extraOffset = 20;
       const cardsWidth = cards.scrollWidth;
       const wrapperWidth = wrapper.offsetWidth;
-      const scrollLength = (cardsWidth - wrapperWidth + extraOffset) * 2;
+      const extraOffset = 20;
 
       gsap.to(cards, {
          x: () => -(cardsWidth - wrapperWidth + extraOffset),
@@ -375,10 +374,9 @@ document.addEventListener("DOMContentLoaded", () => {
          scrollTrigger: {
             trigger: section,
             start: "bottom bottom",
-            end: () => `+=${scrollLength}`,
+            end: () => `+=${cardsWidth - wrapperWidth + extraOffset}`,
             pin: true,
-            scrub: 0.1,
-            fastScrollEnd: true
+            scrub: true,
          }
       });
    }
