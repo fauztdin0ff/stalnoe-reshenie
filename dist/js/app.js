@@ -337,7 +337,10 @@ document.addEventListener('DOMContentLoaded', function () {
 /*------------------------------
 Partners anim
 ---------------------------*/
+
+
 document.addEventListener("DOMContentLoaded", () => {
+
    gsap.registerPlugin(ScrollTrigger);
 
    const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
@@ -355,7 +358,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       gsap.to(cards, {
          y: () => -(cardsHeight - sectionHeight + extraOffset),
-         ease: "power1.out",
          scrollTrigger: {
             trigger: section,
             start: "top top",
@@ -388,6 +390,12 @@ document.addEventListener("DOMContentLoaded", () => {
    }
 });
 
+window.addEventListener("load", () => {
+   ScrollTrigger.refresh();
+});
+ScrollTrigger.config({
+   ignoreMobileResize: true
+});
 })();
 
 /******/ })()
