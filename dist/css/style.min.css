@@ -1907,7 +1907,6 @@ Partners
   will-change: transform;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
-  transition: all 0.1s linear 0s;
 }
 @media (width < 1024px) {
   .partners__cards {
@@ -2279,7 +2278,7 @@ Faq
   color: rgba(249, 249, 249, 0.5);
   font-size: 32px;
   font-weight: 400;
-  line-height: 102%;
+  line-height: 80%;
   letter-spacing: 0;
   text-align: center;
   transition: all 0.3s ease 0s;
