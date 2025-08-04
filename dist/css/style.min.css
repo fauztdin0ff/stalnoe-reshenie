@@ -772,6 +772,7 @@ header
 .menu__body-close svg {
   width: 26px;
   height: 26px;
+  color: #1c2a35;
 }
 @media (width < 767px) {
   .menu__body-close svg {
@@ -1892,6 +1893,7 @@ Partners
   display: flex;
   flex-direction: column;
   gap: 25px;
+  will-change: transform;
 }
 @media (width < 1024px) {
   .partners__cards {
@@ -2266,6 +2268,7 @@ Faq
   letter-spacing: 0;
   text-align: center;
   transition: all 0.3s ease 0s;
+  flex: 0 0 20px;
 }
 .faq__item-icon .icon-minus {
   display: none;
