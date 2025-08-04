@@ -1893,6 +1893,11 @@ Partners
     width: 100%;
   }
 }
+@media (width < 1024px) {
+  .partners__cards-wrapper {
+    scroll-snap-type: x mandatory;
+  }
+}
 .partners__cards {
   display: flex;
   flex-direction: column;

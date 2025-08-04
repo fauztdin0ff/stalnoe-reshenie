@@ -346,21 +346,25 @@ document.addEventListener("DOMContentLoaded", () => {
    const cards = document.querySelector(".partners__cards");
    const wrapper = document.querySelector(".partners__cards-wrapper");
 
+   const extraOffset = 140;
+
    if (isDesktop) {
       // Вертикальная прокрутка карточек
       const cardsHeight = cards.scrollHeight;
       const sectionHeight = section.offsetHeight;
-      const extraOffset = 140; // ⬅️ отступ в конце
+
+      const scrollLength = (cardsHeight - sectionHeight + extraOffset) * 2;
 
       gsap.to(cards, {
          y: () => -(cardsHeight - sectionHeight + extraOffset),
-         ease: "none",
+         ease: "power1.out",
          scrollTrigger: {
             trigger: section,
             start: "top top",
-            end: () => `+=${cardsHeight - sectionHeight + extraOffset}`,
+            end: () => `+=${scrollLength}`,
             pin: true,
-            scrub: true,
+            scrub: 0.3,
+            fastScrollEnd: true
          }
       });
 
@@ -368,17 +372,19 @@ document.addEventListener("DOMContentLoaded", () => {
       // Горизонтальная прокрутка карточек
       const cardsWidth = cards.scrollWidth;
       const wrapperWidth = wrapper.offsetWidth;
-      const extraOffset = 10; // ⬅️ отступ в конце
+
+      const scrollLength = (cardsWidth - wrapperWidth + extraOffset) * 2;
 
       gsap.to(cards, {
          x: () => -(cardsWidth - wrapperWidth + extraOffset),
-         ease: "none",
+         ease: "power1.out",
          scrollTrigger: {
             trigger: section,
             start: "bottom bottom",
-            end: () => `+=${cardsWidth - wrapperWidth + extraOffset}`,
+            end: () => `+=${scrollLength}`,
             pin: true,
-            scrub: true,
+            scrub: 0.3,
+            fastScrollEnd: true
          }
       });
    }
