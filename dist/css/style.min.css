@@ -1906,6 +1906,8 @@ Partners
   gap: 25px;
   will-change: transform;
   transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  transition: all 0.1s linear 0s;
 }
 @media (width < 1024px) {
   .partners__cards {
