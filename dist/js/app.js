@@ -338,19 +338,14 @@ document.addEventListener('DOMContentLoaded', function () {
 Partners anim
 ---------------------------*/
 
-
 document.addEventListener("DOMContentLoaded", () => {
-
    gsap.registerPlugin(ScrollTrigger);
-
    const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
-
    const section = document.querySelector(".partners");
    const cards = document.querySelector(".partners__cards");
    const wrapper = document.querySelector(".partners__cards-wrapper");
 
    if (isDesktop) {
-      // Вертикальная прокрутка карточек
       const extraOffset = 180;
       const cardsHeight = cards.scrollHeight;
       const sectionHeight = section.offsetHeight;
@@ -369,7 +364,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
    } else {
-      // Горизонтальная прокрутка карточек
       const extraOffset = 20;
       const cardsWidth = cards.scrollWidth;
       const wrapperWidth = wrapper.offsetWidth;
@@ -377,7 +371,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       gsap.to(cards, {
          x: () => -(cardsWidth - wrapperWidth + extraOffset),
-         ease: "power1.out",
+         ease: "none",
          scrollTrigger: {
             trigger: section,
             start: "bottom bottom",
