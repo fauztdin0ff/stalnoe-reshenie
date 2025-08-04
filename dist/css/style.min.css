@@ -1952,6 +1952,7 @@ Partners
   max-width: 306px;
   position: relative;
   z-index: 2;
+  will-change: transform;
 }
 @media (width < 1024px) {
   .partner__name {
