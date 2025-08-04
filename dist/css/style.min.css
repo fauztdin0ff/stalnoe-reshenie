@@ -1896,6 +1896,7 @@ Partners
 @media (width < 1024px) {
   .partners__cards-wrapper {
     scroll-snap-type: x mandatory;
+    will-change: transform;
   }
 }
 .partners__cards {
@@ -1903,6 +1904,7 @@ Partners
   flex-direction: column;
   gap: 25px;
   will-change: transform;
+  transition: transform 0.1s linear 0s;
 }
 @media (width < 1024px) {
   .partners__cards {

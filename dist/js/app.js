@@ -346,13 +346,11 @@ document.addEventListener("DOMContentLoaded", () => {
    const cards = document.querySelector(".partners__cards");
    const wrapper = document.querySelector(".partners__cards-wrapper");
 
-   const extraOffset = 140;
-
    if (isDesktop) {
       // Вертикальная прокрутка карточек
+      const extraOffset = 100;
       const cardsHeight = cards.scrollHeight;
       const sectionHeight = section.offsetHeight;
-
       const scrollLength = (cardsHeight - sectionHeight + extraOffset) * 2;
 
       gsap.to(cards, {
@@ -370,9 +368,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
    } else {
       // Горизонтальная прокрутка карточек
+      const extraOffset = 20;
       const cardsWidth = cards.scrollWidth;
       const wrapperWidth = wrapper.offsetWidth;
-
       const scrollLength = (cardsWidth - wrapperWidth + extraOffset) * 2;
 
       gsap.to(cards, {
