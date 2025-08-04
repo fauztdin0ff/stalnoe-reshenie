@@ -1897,6 +1897,7 @@ Partners
   .partners__cards-wrapper {
     scroll-snap-type: x mandatory;
     will-change: transform;
+    transform: translate3d(0, 0, 0);
   }
 }
 .partners__cards {
@@ -1904,6 +1905,7 @@ Partners
   flex-direction: column;
   gap: 25px;
   will-change: transform;
+  transform: translate3d(0, 0, 0);
 }
 @media (width < 1024px) {
   .partners__cards {
