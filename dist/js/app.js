@@ -400,13 +400,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       gsap.to(cards, {
          y: () => -(cardsHeight - sectionHeight + extraOffset),
-         ease: "none",
+         ease: "power1.in",
          scrollTrigger: {
             trigger: section,
             start: "top top",
             end: () => `+=${cardsHeight - sectionHeight + extraOffset}`,
             pin: true,
-            scrub: true,
+            scrub: 1,
          }
       });
 
@@ -417,13 +417,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       gsap.to(cards, {
          x: () => -(cardsWidth - wrapperWidth + extraOffset),
-         ease: "none",
+         ease: "power1.in",
          scrollTrigger: {
             trigger: section,
             start: "bottom bottom",
             end: () => `+=${cardsWidth - wrapperWidth + extraOffset}`,
             pin: true,
-            scrub: true,
+            scrub: 1,
          }
       });
    }
