@@ -1945,6 +1945,7 @@ Partners
   .partners__cards-wrapper {
     will-change: transform;
     transform: translateZ(0);
+    backface-visibility: hidden;
   }
 }
 .partners__cards {
@@ -1953,6 +1954,7 @@ Partners
   gap: 25px;
   will-change: transform;
   transform: translateZ(0);
+  backface-visibility: hidden;
 }
 @media (width < 1024px) {
   .partners__cards {
@@ -1980,6 +1982,7 @@ Partners
   gap: 40px;
   will-change: transform;
   transform: translateZ(0);
+  backface-visibility: hidden;
 }
 @media (width < 1024px) {
   .partner {
