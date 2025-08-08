@@ -1944,6 +1944,7 @@ Partners
 @media (width < 1024px) {
   .partners__cards-wrapper {
     will-change: transform;
+    transform: translateZ(0);
   }
 }
 .partners__cards {
@@ -1951,6 +1952,7 @@ Partners
   flex-direction: column;
   gap: 25px;
   will-change: transform;
+  transform: translateZ(0);
 }
 @media (width < 1024px) {
   .partners__cards {
@@ -1964,6 +1966,8 @@ Partners
 }
 
 .partner {
+  transition: all 0.3s linear 0s;
+  transform: translateZ(0);
   width: 550px;
   height: auto;
   aspect-ratio: 1/1;
@@ -1975,6 +1979,7 @@ Partners
   justify-content: space-between;
   gap: 40px;
   will-change: transform;
+  transform: translateZ(0);
 }
 @media (width < 1024px) {
   .partner {
