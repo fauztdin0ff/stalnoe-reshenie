@@ -82,19 +82,16 @@
             <div class="hero__body container">
                <div class="hero__text">
                   <h1 class="hero__title">
-                     Проектирование <br> промышленных <br>
-                     <span>
-                        зданий
-                        <a href="tel:+79952312131" class="phone-link">
-                           <span class="phone-link__att">по будням с 9:00 до 18:00</span>
-                           <svg>
-                              <use xlink:href="#icon-telephone"></use>
-                           </svg>
-                           +7 995 231 21 31
-                        </a>
-                     </span>
+                     Проектирование <br> промышленных <br><span>зданий</span>
                   </h1>
                   <div class="hero__buttons">
+                     <a href="tel:+79952312131" class="phone-link">
+                        <span class="phone-link__att">по будням с 9:00 до 18:00</span>
+                        <svg>
+                           <use xlink:href="#icon-telephone"></use>
+                        </svg>
+                        +7 995 231 21 31
+                     </a>
                      <button type="button" class="btn-outline open-popup" data-popup="callback"><span>Оставьте
                            заявку</span></button>
                   </div>
@@ -440,8 +437,19 @@
                <h2 class="projects__title title-sm">Выполненые <br> проекты</h2>
                <div class="projects__items">
                   <div class="projects__item">
-                     <div class="projects__item-image">
-                        <img src="img/cases/case-1.png" width="376" height="350" alt="Проект">
+                     <div class="projects__item-slider swiper">
+                        <div class="swiper-wrapper">
+                           <div class="projects__item-slide swiper-slide">
+                              <img src="img/cases/case-1.png" width="376" height="350" alt="Проект">
+                           </div>
+                           <div class="projects__item-slide swiper-slide">
+                              <img src="img/cases/case-2.png" width="376" height="350" alt="Проект">
+                           </div>
+                           <div class="projects__item-slide swiper-slide">
+                              <img src="img/cases/case-3.png" width="376" height="350" alt="Проект">
+                           </div>
+                        </div>
+                        <div class="projects__item-pagination swiper-pagination"></div>
                      </div>
                      <div class="projects__item-info">
                         <div class="projects__item-name">“Проектирование промышленного здания для фармацевтической
@@ -450,8 +458,19 @@
                   </div>
 
                   <div class="projects__item">
-                     <div class="projects__item-image">
-                        <img src="img/cases/case-2.png" width="376" height="350" alt="Проект">
+                     <div class="projects__item-slider swiper">
+                        <div class="swiper-wrapper">
+                           <div class="projects__item-slide swiper-slide">
+                              <img src="img/cases/case-2.png" width="376" height="350" alt="Проект">
+                           </div>
+                           <div class="projects__item-slide swiper-slide">
+                              <img src="img/cases/case-1.png" width="376" height="350" alt="Проект">
+                           </div>
+                           <div class="projects__item-slide swiper-slide">
+                              <img src="img/cases/case-3.png" width="376" height="350" alt="Проект">
+                           </div>
+                        </div>
+                        <div class="projects__item-pagination swiper-pagination"></div>
                      </div>
                      <div class="projects__item-info">
                         <div class="projects__item-name">“Проектирование промышленного здания для фармацевтической
@@ -460,8 +479,19 @@
                   </div>
 
                   <div class="projects__item">
-                     <div class="projects__item-image">
-                        <img src="img/cases/case-3.png" width="376" height="350" alt="Проект">
+                     <div class="projects__item-slider swiper">
+                        <div class="swiper-wrapper">
+                           <div class="projects__item-slide swiper-slide">
+                              <img src="img/cases/case-3.png" width="376" height="350" alt="Проект">
+                           </div>
+                           <div class="projects__item-slide swiper-slide">
+                              <img src="img/cases/case-1.png" width="376" height="350" alt="Проект">
+                           </div>
+                           <div class="projects__item-slide swiper-slide">
+                              <img src="img/cases/case-2.png" width="376" height="350" alt="Проект">
+                           </div>
+                        </div>
+                        <div class="projects__item-pagination swiper-pagination"></div>
                      </div>
                      <div class="projects__item-info">
                         <div class="projects__item-name">“Проектирование промышленного здания для фармацевтической
@@ -941,7 +971,7 @@
    <div class="footer__body container">
       <div class="footer__logo">
          <a href="index.html" aria-label="Домой">
-            <img src="img/logo-footer.svg" width="115" height="106" alt="logo">
+            <img src="img/logo-brand.svg" width="133" height="62" alt="logo">
          </a>
       </div>
       <div class="footer__content">
@@ -963,17 +993,6 @@
                   </svg>
                   +7 995 231 21 31
                </a>
-            </div>
-            <div class="footer__go-top corners">
-               <svg>
-                  <use xlink:href="#icon-arrow"></use>
-               </svg>
-               <span class="corners__items">
-                  <span class="corners__item-1"></span>
-                  <span class="corners__item-2"></span>
-                  <span class="corners__item-3"></span>
-                  <span class="corners__item-4"></span>
-               </span>
             </div>
          </div>
          <div class="footer__text">
@@ -1240,6 +1259,18 @@
       </div>
    </div>
 </div>
+
+      <div class="go-top corners">
+         <svg>
+            <use xlink:href="#icon-arrow"></use>
+         </svg>
+         <span class="corners__items">
+            <span class="corners__item-1"></span>
+            <span class="corners__item-2"></span>
+            <span class="corners__item-3"></span>
+            <span class="corners__item-4"></span>
+         </span>
+      </div>
    </div>
    <svg viewBox="0 0 249 262" xmlns="http://www.w3.org/2000/svg" style="display: none;"
    xmlns:xlink="http://www.w3.org/1999/xlink"><svg fill="none" viewBox="0 0 16 21" id="icon-arrow"

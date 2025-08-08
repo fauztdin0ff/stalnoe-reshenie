@@ -143,6 +143,23 @@ __webpack_require__.r(__webpack_exports__);
 
 _modules_functions_js__WEBPACK_IMPORTED_MODULE_0__.isWebp();
 
+/*------------------------------
+Fix header
+---------------------------*/
+document.addEventListener('DOMContentLoaded', function () {
+   const header = document.querySelector('header');
+
+   if (!header) return;
+
+   window.addEventListener('scroll', function () {
+      if (window.scrollY > 100) {
+         header.classList.add('fixed');
+      } else {
+         header.classList.remove('fixed');
+      }
+   });
+});
+
 
 /*------------------------------
 Popups
@@ -184,6 +201,24 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+/*------------------------------
+Projects slider
+---------------------------*/
+document.addEventListener("DOMContentLoaded", function () {
+   const sliders = document.querySelectorAll('.projects__item-slider');
+
+   sliders.forEach((slider) => {
+      new Swiper(slider, {
+         slidesPerView: 1,
+         spaceBetween: 16,
+         loop: true,
+         pagination: {
+            el: slider.querySelector('.projects__item-pagination'),
+            clickable: true,
+         },
+      });
+   });
+});
 
 /*------------------------------
 Phone mask
@@ -302,9 +337,20 @@ document.addEventListener("DOMContentLoaded", function () {
 Scroll to top
 ---------------------------*/
 document.addEventListener('DOMContentLoaded', function () {
-   const goTopBtn = document.querySelector('.footer__go-top');
+   const goTopBtn = document.querySelector('.go-top');
 
    if (!goTopBtn) return;
+
+   window.addEventListener('scroll', function () {
+      const scrollY = window.scrollY || window.pageYOffset;
+      const triggerPoint = window.innerHeight;
+
+      if (scrollY > triggerPoint) {
+         goTopBtn.classList.add('visible');
+      } else {
+         goTopBtn.classList.remove('visible');
+      }
+   });
 
    goTopBtn.addEventListener('click', function (e) {
       e.preventDefault();
@@ -332,6 +378,7 @@ document.addEventListener('DOMContentLoaded', function () {
       requestAnimationFrame(animateScroll);
    });
 });
+
 
 
 /*------------------------------
