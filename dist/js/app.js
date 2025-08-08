@@ -393,22 +393,32 @@ document.addEventListener("DOMContentLoaded", () => {
    const cards = document.querySelector(".partners__cards");
    const wrapper = document.querySelector(".partners__cards-wrapper");
 
+   [cards, wrapper].forEach(el => {
+      if (el) {
+         el.style.willChange = "transform";
+         el.style.transform = "translateZ(0)";
+      }
+   });
+
    if (isDesktop) {
       const cardsHeight = cards.scrollHeight;
       const sectionHeight = section.offsetHeight;
       const extraOffset = 140;
 
+      const moveY = -(cardsHeight - sectionHeight + extraOffset);
+      const scrollDistance = Math.abs(moveY);
+
       gsap.to(cards, {
-         y: () => -(cardsHeight - sectionHeight + extraOffset),
+         y: moveY,
          ease: "none",
          force3D: true,
          scrollTrigger: {
             trigger: section,
             start: "top top",
-            end: () => `+=${cardsHeight - sectionHeight + extraOffset}`,
+            end: `+=${scrollDistance}`,
             pin: true,
             anticipatePin: 1,
-            scrub: true,
+            scrub: true
          }
       });
 
@@ -417,17 +427,20 @@ document.addEventListener("DOMContentLoaded", () => {
       const wrapperWidth = wrapper.offsetWidth;
       const extraOffset = 20;
 
+      const moveX = -(cardsWidth - wrapperWidth + extraOffset);
+      const scrollDistance = Math.abs(moveX);
+
       gsap.to(cards, {
-         x: () => -(cardsWidth - wrapperWidth + extraOffset),
+         x: moveX,
          ease: "none",
          force3D: true,
          scrollTrigger: {
             trigger: section,
             start: "bottom bottom",
-            end: () => `+=${cardsWidth - wrapperWidth + extraOffset}`,
+            end: `+=${scrollDistance}`,
             pin: true,
             anticipatePin: 1,
-            scrub: true,
+            scrub: true
          }
       });
    }
@@ -436,9 +449,12 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("load", () => {
    ScrollTrigger.refresh();
 });
+
 ScrollTrigger.config({
    ignoreMobileResize: true
 });
+
+
 })();
 
 /******/ })()
